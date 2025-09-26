@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spam Check Result</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: black;
+      color: white;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .result-container {
+      text-align: center;
+      padding: 20px;
+      border-radius: 10px;
+      width: 50%;
+      background-color: #222;
+    }
+
+    .result-container h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .result-container p {
+      font-size: 1.5rem;
+      padding: 10px;
+      border-radius: 5px;
+    }
+
+    .spam {
+      background-color: #ffcccc; /* Light red for spam */
+      color: #cc0000; /* Dark red text */
+      border: 2px solid #cc0000;
+    }
+
+    .not-spam {
+      background-color: #ccffcc; /* Light green for not spam */
+      color: #006600; /* Dark green text */
+      border: 2px solid #006600;
+    }
+
+    a {
+      color: green;
+      text-decoration: none;
+      margin-top: 20px;
+      display: inline-block;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="result-container">
+    <h1>Spam Check Result</h1>
+    <p class="{{ 'spam' if result == 'Spam' else 'not-spam' }}">{{ result }}</p>
+    <a href="/dashboard">Go Back to Dashboard</a>
+  </div>
+</body>
+</html>

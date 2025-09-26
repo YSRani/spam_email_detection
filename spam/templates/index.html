@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spam Email Detection</title>
+  <style>
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Arial, sans-serif;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    .welcome-message {
+      color: green;
+      font-size: 2.5rem;
+      text-align: center;
+    }
+
+    .button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 1rem;
+      color: white;
+      background-color: green;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      display: block;
+      width: 150px;
+      margin: 10px auto;
+    }
+
+    .button:hover {
+      background-color: darkgreen;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="welcome-message">
+      Welcome to Spam Email Detection
+    </div>
+    <center>
+      <a href="{{ url_for('login') }}">
+        <button class="button">Login</button>
+      </a>
+    </center>
+  </div> 
+</body>
+</html>
